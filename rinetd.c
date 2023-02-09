@@ -541,7 +541,7 @@ void readConfiguration(void)
 			} else {
 				bindPort = atoi(bindPortS);
 			}
-			if ((bindPort == 0) || (bindPort >= 65536)) {
+			if ((bindPort == 0) || (bindPort >= 65535)) {
 				fprintf(stderr, "rinetd: bind port missing "
 					"or out of range on line %d.\n", lnum);
 				continue;
@@ -564,7 +564,7 @@ void readConfiguration(void)
 			} else {
 				connectPort = atoi(connectPortS);
 			}
-			if ((connectPort == 0) || (connectPort >= 65536)) {
+			if ((connectPort == 0) || (connectPort >= 65535)) {
 				fprintf(stderr, "rinetd: bind port missing "
 					"or out of range on line %d.\n", lnum);
 				continue;
